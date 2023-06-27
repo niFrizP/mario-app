@@ -19,7 +19,7 @@ export class RegisterPage implements OnInit {
     const user = await this.authSvc.onRegister(this.user);
     if (user){
       console.log('¡Usuario creado!');
-      //this.router.navigateByUrl('/login');
+      this.router.navigateByUrl('/login');
   }
 
   }
