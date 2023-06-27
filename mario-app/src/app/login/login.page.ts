@@ -26,6 +26,9 @@ export class LoginPage implements OnInit {
 
 }
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import { User } from '../shared/user.class';
 
 @Component({
   selector: 'app-login',
@@ -33,10 +36,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
-  constructor() { }
+  user : User = new User()
+  constructor(private router: Router, private authSvc:AuthService) { }
 
   ngOnInit() {
+  }
+
+  async onLogin(){
+    const user = await this.authSvc.onLogin(this.user);
+    
+    if (user) {
+      console.log('Sesión iniciada');
+      this.router.navigateByUrl('/');
+    }
   }
 
 }
