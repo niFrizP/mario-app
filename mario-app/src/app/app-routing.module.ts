@@ -25,7 +25,15 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule),
     canActivate: [AuthGuard]
+  },  {
+    path: 'navegar',
+    loadChildren: () => import('./app/navegar/navegar.module').then( m => m.NavegarPageModule)
   },
+  {
+    path: 'navegar',
+    loadChildren: () => import('./navegar/navegar.module').then( m => m.NavegarPageModule)
+  },
+
 
 ];
 
