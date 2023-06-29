@@ -1,0 +1,35 @@
+<form (ngSubmit)="registrarPedido()">
+  <ion-item>
+    <ion-label>Chocman</ion-label>
+    <ion-input type="number" [(ngModel)]="productos['chocman']"></ion-input>
+    <ion-button shape="round" (click)="agregarCantidad('chocman')">+</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Alfajor</ion-label>
+    <ion-input type="number" [(ngModel)]="productos['alfajor']"></ion-input>
+    <ion-button shape="round" (click)="agregarCantidad('alfajor')">+</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Chokita</ion-label>
+    <ion-input type="number" [(ngModel)]="productos['chokita']"></ion-input>
+    <ion-button shape="round" (click)="agregarCantidad('chokita')">+</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Detalle de entrega</ion-label>
+    <ion-select [(ngModel)]="detalleEntrega">
+      <ion-select-option value="Edificio H">Edificio H</ion-select-option>
+      <ion-select-option value="Edificio E">Edificio E</ion-select-option>
+      <ion-select-option value="Casino">Casino</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Comentario (máximo 10 palabras)</ion-label>
+    <ion-textarea rows="2" maxlength="10" [(ngModel)]="comentario"></ion-textarea>
+  </ion-item>
+
+  <ion-button expand="full" type="submit">Registrar pedido</ion-button>
+</form>
