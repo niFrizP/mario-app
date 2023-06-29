@@ -17,4 +17,9 @@ export class HomePage implements OnInit {
     this.afAuth.signOut();
     this.router.navigateByUrl('/login');
   }
+  onLogout(){
+    console.log('Sesión cerrada')
+    this.afAuth.signOut();
+    this.router.navigateByUrl('/login');
+  }
 }
