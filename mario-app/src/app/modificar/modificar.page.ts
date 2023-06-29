@@ -16,13 +16,13 @@ class Product {
   selector: 'app-root',
   template: `
     <h1>Product List</h1>
-    <ul>
+    
       <li *ngFor="let product of products">
         {{ product.name }} - {{ product.description }}
         <ion-button (click)="deleteProduct(product)">Delete</ion-button>
         <ion-button (click)="editProduct(product)">Edit</ion-button>
       </li>
-    </ul>
+    
 
     <div *ngIf="editingProduct">
       <h2>Edit Product</h2>
