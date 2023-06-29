@@ -1,20 +1,26 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Bienvenido a MarioAPP
+      Home
+      Mario APP
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      Welcome to Ionic!
+    </ion-card-header>
+    <ion-card-content>
+      This is the home page of your Ionic app.
+    </ion-card-content>
+  </ion-card>
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+    <ion-button size="large" (click)="onLogout()">Logout</ion-button>
+    <ion-button size="large" routerLink="/admin">Admin</ion-button>
+ </ion-content>
+    <ion-button size="large" (click)="onLogout()">Logout</ion-button>
+    <ion-button size="large" routerLink="/admin">Admin</ion-button>
+ </ion-content>
