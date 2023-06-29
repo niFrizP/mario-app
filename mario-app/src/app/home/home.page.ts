@@ -12,4 +12,9 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
 
+  onLogout(){
+    console.log('Sesión cerrada')
+    this.afAuth.signOut();
+    this.router.navigateByUrl('/login');
+  }
 }
