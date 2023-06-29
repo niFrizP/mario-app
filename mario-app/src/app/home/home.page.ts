@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +10,11 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private authSvc: AuthService, private router: Router, private afAuth: AngularFireAuth) {}
 
+  onLogout(){
+    console.log('Sesión cerrada')
+    this.afAuth.signOut();
+    this.router.navigateByUrl('/login');
+  }
 }
