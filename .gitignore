@@ -1,3 +1,5 @@
 mario-app/package-lock.json
 mario-app/package.json
 mario-app/node_modules/.package-lock.json
+mario-app/node_modules/.bin
+node_modules
