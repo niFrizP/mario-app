@@ -41,18 +41,18 @@ export class ModificarPage{
   products: Product[] = [
     {
       id: 1,
-      name: 'Product 1',
-      description: 'This is product 1.'
+      name: 'Chocman',
+      description: '$350'
     },
     {
       id: 2,
-      name: 'Product 2',
-      description: 'This is product 2.'
+      name: 'Alfajor',
+      description: '$400'
     },
     {
       id: 3,
-      name: 'Product 3',
-      description: 'This is product 3.'
+      name: 'Chokita',
+      description: '$350'
     }
   ];
 
