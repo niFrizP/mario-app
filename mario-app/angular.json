@@ -137,11 +137,7 @@
     "schematicCollections": [
       "@ionic/angular-toolkit"
     ],
-<<<<<<< HEAD
-    "analytics": false
-=======
     "analytics": "bda635c5-a112-44ea-9351-3c7a8f86ec73"
->>>>>>> 7a86cc0e (cambios)
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
