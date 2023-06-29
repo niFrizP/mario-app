@@ -14,8 +14,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'modificar',
-    loadChildren: () => import('./modificar/modificar.module').then( m => m.ModificarPageModule)
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
   {
     path: 'login',
@@ -25,6 +25,7 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule),
     canActivate: [AuthGuard]
+
   },
 
 ];
