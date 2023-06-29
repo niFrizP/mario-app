@@ -1,17 +1,22 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { AuthService } from '../services/auth.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
-  constructor(private authSvc: AuthService, private router: Router, private afAuth: AngularFireAuth) {}
+  constructor() { }
 
+  ngOnInit() {
+  }
+
+  onLogout(){
+    console.log('Sesión cerrada')
+    this.afAuth.signOut();
+    this.router.navigateByUrl('/login');
+  }
   onLogout(){
     console.log('Sesión cerrada')
     this.afAuth.signOut();

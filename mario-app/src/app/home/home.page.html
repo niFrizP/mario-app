@@ -1,12 +1,26 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
       Bienvenido a MarioAPP
+      Home
+      Mario APP
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      Welcome to Ionic!
+    </ion-card-header>
+    <ion-card-content>
+      This is the home page of your Ionic app.
+    </ion-card-content>
+  </ion-card>
 <ion-content [fullscreen]="true">
+    <ion-button size="large" (click)="onLogout()">Logout</ion-button>
+    <ion-button size="large" routerLink="/admin">Admin</ion-button>
+ </ion-content>
     <ion-button size="large" (click)="onLogout()">Logout</ion-button>
     <ion-button size="large" routerLink="/admin">Admin</ion-button>
  </ion-content>

@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
     path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+    canActivate: [AuthGuard]
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
     canActivate: [AuthGuard]
   },
@@ -14,22 +17,17 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+    path: 'modificar',
+    loadChildren: () => import('./modificar/modificar.module').then( m => m.ModificarPageModule)
   },
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'modificar',
-    loadChildren: () => import('./modificar/modificar.module').then( m => m.ModificarPageModule)
-  },
-  {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule),
     canActivate: [AuthGuard]
-
   },
 
 ];
