@@ -17,11 +17,16 @@ class Product {
   template: `
     <h1>Product List</h1>
     
-      <li *ngFor="let product of products">
+    <li *ngFor="let product of products">
         {{ product.name }} - {{ product.description }}
-        <ion-button (click)="deleteProduct(product)">Delete</ion-button>
-        <ion-button (click)="editProduct(product)">Edit</ion-button>
+        <ion-button (click)="editProduct(product)">
+        <ion-icon name="pencil-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="deleteProduct(product)">
+           <ion-icon name="trash-outline"></ion-icon></ion-button>
+          
       </li>
+    
     
 
     <div *ngIf="editingProduct">
