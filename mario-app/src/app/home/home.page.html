@@ -2,6 +2,7 @@
   <ion-toolbar>
     <ion-title>
       Home
+      Mario APP
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,4 +16,15 @@
       This is the home page of your Ionic app.
     </ion-card-content>
   </ion-card>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-button size="large" ()="onLogout()">Logout</ion-button>
+    <ion-button size="large" href="/admin">Admin</ion-button>
+  </div>
 </ion-content>
