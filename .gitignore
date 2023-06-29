@@ -3,3 +3,4 @@ mario-app/package.json
 mario-app/node_modules/.package-lock.json
 mario-app/node_modules/.bin
 node_modules
+mario-app/node_modules/@ionic/angular-toolkit/node_modules/rxjs/operators/partition.js
